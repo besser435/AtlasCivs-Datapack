@@ -22,8 +22,8 @@ jobs:
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "Build ${{ github.sha }}"
-          tag_name: "build-${{ github.sha }}"
+         name: "Build ${{ github.sha[0:7] }}"
+         tag_name: "build-${{ github.sha[0:7] }}"
           files: AtlasCivs-*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
