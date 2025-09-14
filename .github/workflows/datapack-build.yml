@@ -1,0 +1,26 @@
+name: Build and Release Datapack
+
+on:
+  push:         # every commit on main
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Create zip
+        run: |
+          zip -r AtlasCivs-${{ github.sha }}.zip pack.mcmeta data
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: "Build ${{ github.sha }}"
+          tag_name: "build-${{ github.sha }}"
+          files: datapack-*.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
