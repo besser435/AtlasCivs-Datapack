@@ -21,3 +21,7 @@ As Minecraft gets updates, be sure to update this folder.
 
 ## Contribuing
 Get approval from bca, and ensure your additions follow the conventions in this repository. 
+
+### Helpful Resources
+[Datapack Contents](https://minecraft.wiki/w/Data_pack#Contents) 
+[List of tag types (Java Edition)](https://minecraft.wiki/w/Tag_(Java_Edition)#List_of_tag_types)
