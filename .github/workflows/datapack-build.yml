@@ -24,6 +24,6 @@ jobs:
         with:
           name: "Build ${{ github.sha }}"
           tag_name: "build-${{ github.sha }}"
-          files: AtlasCivs-*.zip
+          files: AtlasCivs.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
