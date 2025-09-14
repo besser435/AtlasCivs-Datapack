@@ -17,13 +17,13 @@ jobs:
 
       - name: Create zip
         run: |
-          zip -r AtlasCivs-${{ github.sha }}.zip pack.mcmeta data
+          zip -r AtlasCivs-$(date +'%Y-%m-%d_%H-%M-%S').zip pack.mcmeta data
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "Build ${{ github.sha[0:7] }}"
-          tag_name: "build-${{ github.sha[0:7] }}"
+          name: "Build $(date +'%Y-%m-%d_%H-%M-%S')"
+          tag_name: "build-$(date +'%Y-%m-%d_%H-%M-%S')"
           files: AtlasCivs-*.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
