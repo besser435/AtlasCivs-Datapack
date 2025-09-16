@@ -32,7 +32,8 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           name: "Build ${{ env.BUILD_TIME }}"
-          tag_name: "build-${{ env.TAG_TIME }}"
-          files: AtlasCivs.zip
+          body: "Automated build from commit ${{ github.sha }} at ${{ env.BUILD_TIME }}"
+          tag_name: "build-${{ env.TAG_NAME }}"
+          files: AtlasCivs-${{ env.BUILD_TIME }}.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
