@@ -21,17 +21,18 @@ jobs:
 
       - name: Set build time
         run: |
-          echo "BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_ENV
+          echo "BUILD_TIME=$(date -u +'%Y-%m-%dT%H:%M:%SZ')" >> $GITHUB_ENV
+          echo "TAG_NAME=$(date -u +'%Y%m%d-%H%M%S')" >> $GITHUB_ENV
 
       - name: Create zip
         run: |
-          zip -r AtlasCivs.zip pack.mcmeta data
+          zip -r AtlasCivs-${{ env.BUILD_TIME }}.zip pack.mcmeta data
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
           name: "Build ${{ env.BUILD_TIME }}"
-          tag_name: "build-${{ env.BUILD_TIME }}"
+          tag_name: "build-${{ env.TAG_TIME }}"
           files: AtlasCivs.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
