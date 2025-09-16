@@ -19,6 +19,10 @@ jobs:
         run: |
           python3 scripts/create_give_recipes_mcfunction.py
 
+      - name: Set build time
+        run: |
+          echo "BUILD_TIME=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_ENV
+
       - name: Create zip
         run: |
           zip -r AtlasCivs.zip pack.mcmeta data
@@ -26,8 +30,8 @@ jobs:
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "Build ${{ github.sha }}"
-          tag_name: "build-${{ github.sha }}"
+          name: "Build ${{ env.BUILD_TIME }}"
+          tag_name: "build-${{ env.BUILD_TIME }}"
           files: AtlasCivs.zip
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
