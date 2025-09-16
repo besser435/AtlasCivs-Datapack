@@ -16,8 +16,9 @@ FILENAME_TO_MATCH = "_door.json"   # Match files that end with this.
 # ENSURE THERE IS AN UNDERSCORE!!!
 # If you dont include an underscore, you might match other things. Ex, door.json would also match trapdoor.json
 NEW_OUTPUT_QTY = 4                  # New output quantity
+_MINECRAFT_OVERRIDE_PATH = r"../data/minecraft/recipe"
 
-for root, dirs, files in os.walk("."):
+for root, dirs, files in os.walk(_MINECRAFT_OVERRIDE_PATH):
     for filename in files:
         if filename.endswith(FILENAME_TO_MATCH):
             filepath = os.path.join(root, filename)
