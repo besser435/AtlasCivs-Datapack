@@ -1,0 +1,23 @@
+{
+    "replace": false,
+    "values": [
+        "minecraft:flow_banner_pattern",
+        "minecraft:trident",
+        "minecraft:spire_armor_trim_smithing_template",
+        "minecraft:music_disc_otherside",
+        "minecraft:guster_banner_pattern",
+        "minecraft:nether_star",
+        "minecraft:wither_skeleton_skull",
+        "minecraft:music_disc_creator",
+        "minecraft:ward_armor_trim_smithing_template",
+        "minecraft:skull_banner_pattern",
+        "minecraft:music_disc_lava_chicken",
+        "minecraft:enchanted_golden_apple",
+        "minecraft:eye_armor_trim_smithing_template",
+        "minecraft:mojang_banner_pattern",
+        "minecraft:vex_armor_trim_smithing_template",
+        "minecraft:music_disc_pigstep",
+        "minecraft:beacon"
+    ]
+}
+  

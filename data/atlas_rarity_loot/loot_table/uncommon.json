@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:generic",
+    "pools": [
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "minecraft:tag",
+            "name": "rarity_loot:uncommon",
+            "expand": true
+          }
+        ]
+      }
+    ]
+}
+  
