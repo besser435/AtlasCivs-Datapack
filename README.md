@@ -1,9 +1,7 @@
 # AtlasCivs Datapack
 
-## Enabling
-The datapack should be loaded after Minecraft in order to ensure the overrides work. Enable the datapack with `/datapack enable <file> after vanilla`
 
-## Custom recipes
+# Custom recipes
 Custom recipes are located in [data/atlas_custom_recipes/recipe](data/atlas_custom_recipes/recipe). These are mainly QoL improvements and additional recipes.
 
 The [scripts/create_give_recipes_mcfunction.py](scripts/create_give_recipes_mcfunction.py) python script will be ran on each build. It gives the players
@@ -14,7 +12,7 @@ all of the custom recipes, but not the Minecraft override ones. If you are build
 it will be ran every 60 seconds to give any new players the recipes.
 
 
-## Minecraft recipe overrides
+### Minecraft recipe overrides
 Minecraft recipe overrides are located in [data/minecraft/recipe](data/minecraft/recipe).
 These are recipes that remain unchanged, but increase the number of items granted per craft.
 They are vanilla recipes sourced from the default Minecraft datapack, but have been modified using a Python script. 
@@ -27,7 +25,16 @@ As Minecraft gets updates, be sure to update this folder.
 > Additionally, when using the Python script, make sure the replace file variable starts with an `_` so you don't replace the wrong files.
 > There are more details in the Python script about this.
 
-## Contributing
+# Rarity Loot Rewards
+TBD
+
+
+
+# General Stuff
+### Enabling
+The datapack should be loaded after Minecraft in order to ensure the overrides work. Enable the datapack with `/datapack enable <file> after vanilla`
+
+### Contributing
 Get approval from the admin team, and ensure your additions follow the conventions in this repository. 
 
 ### Helpful Resources
