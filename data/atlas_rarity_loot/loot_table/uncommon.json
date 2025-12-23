@@ -6,7 +6,7 @@
         "entries": [
           {
             "type": "minecraft:tag",
-            "name": "rarity_loot:uncommon",
+            "name": "atlas_rarity_loot:uncommon",
             "expand": true
           }
         ]
