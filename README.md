@@ -28,9 +28,13 @@ The python script is located at [data/minecraft/recipe/edit_output_qty.py](data/
 
 # Rarity Loot Rewards
 By running a single command, we can give a targeted player either diamonds, an item of [uncommon rarity](https://minecraft.wiki/w/Rarity#Uncommon), or [rare rarity](https://minecraft.wiki/w/Rarity#Rare). 
-This is programmed under [data/atlas_rarity_loot](data/atlas_rarity_loot)
+This is programmed under [data/atlas_rarity_loot](data/atlas_rarity_loot).
 
 This is meant to serve as a reward for voting or reffering new players. 
+
+When the datapack loads, it automatically creates a dummy scoreboard objective called `atlas_rarity_roll`. This is thanks to the [load.mcfunction](data/atlas_rarity_loot/function/load.mcfunction), which is called
+at [data/minecraft/tags/function/load.json](data/minecraft/tags/function/load.json).
+
 
 Before this works, we need to create a scoreboard objective with `/scoreboard objectives add atlas_rarity_roll dummy` (only needs to be done once per world).
 Then we can run `execute as @p run function rarity_loot:roll` where @p is a player's username.
