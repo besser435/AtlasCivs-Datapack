@@ -32,7 +32,7 @@ This is programmed under [data/atlas_rarity_loot](data/atlas_rarity_loot)
 
 This is meant to serve as a reward for voting or reffering new players. 
 
-Before this works, we need to create a scoreboard objective with `/scoreboard objectives add rarity_roll dummy` (only needs to be done once per world).
+Before this works, we need to create a scoreboard objective with `/scoreboard objectives add atlas_rarity_roll dummy` (only needs to be done once per world).
 Then we can run `execute as @p run function rarity_loot:roll` where @p is a player's username.
 
 > [!IMPORTANT]
