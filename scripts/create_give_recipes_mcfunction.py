@@ -3,7 +3,7 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 # === CONFIG ===
 DATAPACK_PATH = os.path.join("..")
-NAMESPACE = "atlas_custom"
+NAMESPACE = "atlas_custom_recipes"
 
 # Output function file path
 OUTPUT_FUNCTION = os.path.join(
@@ -41,6 +41,6 @@ with open(OUTPUT_FUNCTION, "w", encoding="utf-8") as f:
         f.write(f"recipe give @a {recipe}\n")
 
     # Run again to ensure any new players that joined have the recipes
-    f.write("schedule function atlas_custom:give_all_recipes 60s")
+    f.write("schedule function atlas_custom_recipes:give_all_recipes 60s")
 
 print(f"Generated {OUTPUT_FUNCTION} with {len(recipes)} recipes.")
