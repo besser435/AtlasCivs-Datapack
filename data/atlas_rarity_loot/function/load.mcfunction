@@ -1,0 +1,1 @@
+scoreboard objectives add atlas_rarity_roll dummy
