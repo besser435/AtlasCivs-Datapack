@@ -33,14 +33,10 @@ This is programmed under [data/atlas_rarity_loot](data/atlas_rarity_loot).
 This is meant to serve as a reward for voting or reffering new players. 
 
 When the datapack loads, it automatically creates a dummy scoreboard objective called `atlas_rarity_roll`. This is thanks to the [load.mcfunction](data/atlas_rarity_loot/function/load.mcfunction), which is called
-at [data/minecraft/tags/function/load.json](data/minecraft/tags/function/load.json).
-
-
-Before this works, we need to create a scoreboard objective with `/scoreboard objectives add atlas_rarity_roll dummy` (only needs to be done once per world).
-Then we can run `execute as @p run function rarity_loot:roll` where @p is a player's username.
+at [data/minecraft/tags/function/load.json](data/minecraft/tags/function/load.json). Then we can run `execute as @p run function atlas_rarity_loot:roll` where @p is a player's username to give them the loot.
 
 > [!IMPORTANT]
-> As Minecraft gets updates, the rarity tags will need to be updated with the new items. They are in [data/atlas_rarity_loot/tags/item](/data/atlas_rarity_loot/tags/item)
+> As Minecraft gets updates, the rarity tags will need to be updated with the new items. They are in [data/atlas_rarity_loot/tags/item](/data/atlas_rarity_loot/tags/item).
 
 # General Stuff
 ### Enabling
