@@ -4,13 +4,13 @@
 The datapack should be loaded after Minecraft in order to ensure the overrides work. Enable the datapack with `/datapack enable <file> after vanilla`
 
 ## Custom recipes
-Custom recipes are located in [data/atlas_custom/recipe](data/atlas_custom/recipe). These are mainly QoL improvements and additional recipes.
+Custom recipes are located in [data/atlas_custom_recipes/recipe](data/atlas_custom_recipes/recipe). These are mainly QoL improvements and additional recipes.
 
 The [scripts/create_give_recipes_mcfunction.py](scripts/create_give_recipes_mcfunction.py) python script will be ran on each build. It gives the players
 all of the custom recipes, but not the Minecraft override ones. If you are building locally, make sure to run this script. 
 
 > [!IMPORTANT]
-> Once the datapack is on the server, the recipe giver needs to be started with `/function atlas_custom:give_all_recipes`. Afterwards
+> Once the datapack is on the server, the recipe giver needs to be started with `/function atlas_custom_recipes:give_all_recipes`. Afterwards
 it will be ran every 60 seconds to give any new players the recipes.
 
 
@@ -28,7 +28,7 @@ As Minecraft gets updates, be sure to update this folder.
 > There are more details in the Python script about this.
 
 ## Contributing
-Get approval from bca, and ensure your additions follow the conventions in this repository. 
+Get approval from the admin team, and ensure your additions follow the conventions in this repository. 
 
 ### Helpful Resources
 [Datapack Contents](https://minecraft.wiki/w/Data_pack#Contents)
