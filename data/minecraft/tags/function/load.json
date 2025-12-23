@@ -1,5 +1,6 @@
 {
   "values": [
-    "atlas_rarity_loot:load"
+    "atlas_rarity_loot:load",
+    "atlas_custom_recipes:load"
   ]
 }
